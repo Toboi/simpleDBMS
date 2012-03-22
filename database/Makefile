@@ -1,5 +1,6 @@
 HEADERS = database.h db.h table.h attribut.h
 
+
 all: database.o
 attribut.o: attribut.c $(HEADERS)
 	cc -c attribut.c
@@ -12,3 +13,4 @@ database.o: attribut.o table.o db.o
 	ld -i *.o -o database.o
 clean:
 	rm *.o;
+ 
