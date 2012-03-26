@@ -36,7 +36,6 @@ Gibt einen Return-Wert gemäß datastruct.h zurück.
 */
 int attr_insert_tupel(struct attribut* attr, int* tupel, int value);
 
-
 struct attribut{
 	int datatype; //Datentyp, wird später definiert per z.B. #define ATTRIBUT_STRING_INDEX oder _UNIQUE (impliziert INDEX)
 	int* index_struct; //Falls in datatype das index-bit gesetzt ist.
