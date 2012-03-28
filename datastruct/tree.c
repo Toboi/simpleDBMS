@@ -1,7 +1,6 @@
-#include "datastructs.h"
+#include "datastruct.h"
 /*
 Inserts an element to a binary tree.
-TODO: Return values.
 */
 int tree_int_insert(int key, int val, int **rootNode){
 	int *ptr = *rootNode;
@@ -51,7 +50,7 @@ int tree_int_get(int key, int *rootNode, int* returnVal){
 		if(*ptr == key){
 			break;
 		}
-		if(*ptr < key){
+		if(*ptr > key){
 			ptr = (int*) *(ptr + 1);
 		}else{
 			ptr = (int*) *(ptr + 2);
@@ -68,6 +67,40 @@ int tree_int_get(int key, int *rootNode, int* returnVal){
 	}
 }
 
+/*
+TODO: Not ready!!!
+Removes an element of the tree.
+*/
+int tree_int_remove(int key, int **rootNode){
+	if(*rootNode == 0){
+		return DATASTRUCT_ERROR_EMPTY_STRUCT;
+	}
+	int *ptr = *rootNode;
+	while(ptr != 0){//Find element.
+		if(*ptr == key){
+			break;
+		}
+		if(*ptr > key){
+			ptr = (int*) *(ptr + 1);
+		}else{
+			ptr = (int*) *(ptr + 2);
+		}
+	}
+	if(ptr != 0){ 	//Element found: TODO
+		//Hier muss die eigentliche Löschfunktion hin. ptr zeigt auf den Node mit dem Key 'key'
+		return *ptr;
+	
+	
+	
+	
+	
+	
+	
+	}else{		//Element not found: return 0.
+		return DATASTRUCT_ERROR_ELEMENT_NOT_FOUND;
+		
+	}
+}
 /*
 Returns the height of the tree.
 (Biggest distance between root-node and a leaf)
