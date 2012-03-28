@@ -1,4 +1,4 @@
-#include "datastructs.h"
+#include "datastruct.h"
 
 /*
 Pushs an element onto a stack.

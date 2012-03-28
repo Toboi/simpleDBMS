@@ -7,6 +7,7 @@ Hier werden Funktionen für den Umgang mit Attributen von Tabellen(->table.c) un
 
 /*
 !!!ZUNÄCHST NUR SUPPORT FÜR INTEGER!!!
+TODO: Values
 */
 #define ATTR_STRING 1
 #define ATTR_STRING_INDEX 1
@@ -27,7 +28,7 @@ IMPLEMENTIERT für Integer
 Gibt einen Zeiger auf ein Tupel (/Eine Liste von Tupeln bei nicht UNIQUE-Attributen?) zurück, das innerhalb dieses Attributs indiziert ist.
 key wird je nach Datentyp des Attributs als int, byte oder char* behandelt.
 */
-int* attr_get_tupel(struct attribut* attr, int key);
+int* attr_get_tupel(struct attribut* attr, int key, int* returnVal);
 
 /*
 IMPLEMENTIERT für Integer
@@ -35,6 +36,11 @@ Fügt ein Tupel in die Index-Struktur dieses Attributs ein, falls indiziert. val
 Gibt einen Return-Wert gemäß datastruct.h zurück.
 */
 int attr_insert_tupel(struct attribut* attr, int* tupel, int value);
+
+/*
+Löscht ein Tupel aus der Index-Struktur.
+*/
+int attr_remove_tupel(struct attribut* attr, int value);
 
 struct attribut{
 	int datatype; //Datentyp, wird später definiert per z.B. #define ATTRIBUT_STRING_INDEX oder _UNIQUE (impliziert INDEX)

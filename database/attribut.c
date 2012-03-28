@@ -4,13 +4,18 @@
 Gibt einen Zeiger auf ein Tupel (/Eine Liste von Tupeln bei nicht UNIQUE-Attributen?) zurück, das innerhalb dieses Attributs indiziert ist.
 key wird je nach Datentyp des Attributs als int, byte oder char* behandelt.
 */
-int* attr_get_tupel(struct attribut* attr, int key){
+int* attr_get_tupel(struct attribut* attr, int key, int* returnVal){
 	//Integer
 	if((*attr).datatype == ATTR_INT_UNIQUE){
-		int returnVal = 0;
-		int returnPtr = tree_int_get(key, (*attr).index_struct, &returnVal);
-		if(returnVal!=DATASTRUCT_SUCCESS){
-			return 0;
+		int retVal = 0;
+		int returnPtr = tree_int_get(key, (*attr).index_struct, &retVal);
+		if(retVal!=DATASTRUCT_SUCCESS){
+			if(returnVal != 0)
+				returnVal = ATTR_TUPEL_NOT_FOUND;
+		}else{
+			if(returnVal != 0)
+				returnVal = DATABASE_SUCCESS;
+			return (int*)returnPtr;
 		}
 	}
 }

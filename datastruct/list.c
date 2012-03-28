@@ -1,4 +1,4 @@
-#include "datastructs.h"
+#include "datastruct.h"
 
 /*
 Returns the value of the element at the specified index and writes the return-code (->datastructs.h) to *returnVal.
