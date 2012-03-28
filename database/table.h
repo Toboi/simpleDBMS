@@ -5,15 +5,6 @@ Hier werden einzelne Tabellen(/Relationen), den Umgang mit ihren Attributen und 
 
 #define TABLE_NAME_LENGTH 128
 
-  /*-------------------------------*/
- /*------- Return-Values ---------*/
-/*-------------------------------*/
-//TODO: Values
-#define TABLE_ERROR_ATTR_NOT_FOUND 1
-#define TABLE_ERROR_ATTR_NO_INDEX 1
-#define TABLE_SUCCESS 1
-
-
 
 struct tbl_header{
 	char tbl_name[TABLE_NAME_LENGTH];
