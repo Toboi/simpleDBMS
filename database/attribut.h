@@ -27,6 +27,7 @@ TODO: Values
 IMPLEMENTIERT für Integer
 Gibt einen Zeiger auf ein Tupel (/Eine Liste von Tupeln bei nicht UNIQUE-Attributen?) zurück, das innerhalb dieses Attributs indiziert ist.
 key wird je nach Datentyp des Attributs als int, byte oder char* behandelt.
+In *returnVal wird, falls returnVal != 0, der Return-Wert geschrieben.
 */
 int* attr_get_tupel(struct attribut* attr, int key, int* returnVal);
 
