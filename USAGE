@@ -1,0 +1,7 @@
+USAGE:
+--Update repo on server--
+git commit -m "MESSAGE"
+git push
+
+--get repo from server--
+git pull

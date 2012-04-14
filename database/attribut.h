@@ -10,8 +10,8 @@ Hier werden Funktionen für den Umgang mit Attributen von Tabellen(->table.c) un
 TODO: Values
 */
 #define ATTR_STRING 1
-#define ATTR_STRING_INDEX 1
-#define ATTR_STRING_UNIQUE 1
+//#define ATTR_STRING_INDEX 1
+//#define ATTR_STRING_UNIQUE 1
 #define ATTR_INT 1
 #define ATTR_INT_INDEX 1
 #define ATTR_INT_UNIQUE 1
@@ -39,7 +39,10 @@ Gibt einen Return-Wert gemäß datastruct.h zurück.
 int attr_insert_tupel(struct attribut* attr, int* tupel, int value);
 
 /*
+IMPLEMENTIERT für Integer
+FEHLEND: int tree_int_remove(int key, int **rootNode);
 Löscht ein Tupel aus der Index-Struktur.
+Gibt einen Return-Wert gemäß datastruct.h zurück.
 */
 int attr_remove_tupel(struct attribut* attr, int value);
 

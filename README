@@ -1,0 +1,6 @@
+This will be a simple DBMS, written in C.
+It should support
+	-different databases
+	-tables with attributes and tupels
+	-a server with each a thread for a connection
+	-maybe a simple user management per database

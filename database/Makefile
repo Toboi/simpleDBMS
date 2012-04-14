@@ -12,5 +12,7 @@ database.o: attribut.o table.o db.o
 	rm database.o; \
 	ld -i *.o -o database.o
 clean:
+	rm db.o table.o attribut.o;
+clean_all:
 	rm *.o;
  
