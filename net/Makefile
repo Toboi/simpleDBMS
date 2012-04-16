@@ -1,4 +1,4 @@
-HEADERS = net.h server.h connection_handler.h
+HEADERS = net.h server.h con_handler.h
 
 
 all: net.o
