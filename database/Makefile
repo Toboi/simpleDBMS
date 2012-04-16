@@ -13,7 +13,7 @@ database.o: attribut.o table.o db.o
 	ld -i *.o -o database.o
 clean:
 	rm db.o table.o attribut.o;
-clean_all:
+clean-all:
 	rm *.o;
 git-push:
 	git add Makefile; \

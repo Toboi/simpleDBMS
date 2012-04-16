@@ -12,7 +12,7 @@ net.o: server.o con_handler.o
 	ld -i *.o -o net.o
 clean:
 	rm server.o con_handler.o;
-clean_all:
+clean-all:
 	rm *.o;
 git-push:
 	git add Makefile; \
