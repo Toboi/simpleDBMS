@@ -101,7 +101,7 @@ int list_int_delete(int index, int** head){
 }
 
 /*
-Deletes the complete list and frees the used memory.
+Deletes the complete list and frees the used memory.+1
 */
 int list_int_free_all(int** head){
 	int* delStack = 0;
@@ -118,4 +118,16 @@ int list_int_free_all(int** head){
 	*head = 0;
 	stack_int_free_all(&delStack);
 	return DATASTRUCT_SUCCESS;
+}
+
+/*
+Returns the size of the list.
+*/
+int list_int_size(int* head){
+	int count = 0;
+	while(head != 0){
+		head = (int*)*(head+1);
+		count++;
+	}
+	return count;
 }

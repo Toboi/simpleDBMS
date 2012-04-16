@@ -5,4 +5,5 @@ int list_int_append(int val, int** head);
 int list_int_insert(int index, int val, int** head);
 int list_int_delete(int index, int** head);
 int list_int_free_all(int** head);
+int list_int_size(int* head);
 #endif

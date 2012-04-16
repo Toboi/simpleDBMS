@@ -49,3 +49,12 @@ Löscht ein Tupel aus der Index-Struktur.
 Gibt einen Return-Wert gemäß datastruct.h zurück.
 */
 int attr_remove_tupel(attribut* attr, int value);
+
+
+
+
+/*
+Gibt den Speicher, den ein Attribut mit Indexstruktur und attribut-header belegt, frei.
+Rückgabewert ist in database.h definiert.
+*/
+int free_attr(attribut* attr);

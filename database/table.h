@@ -47,6 +47,7 @@ Löscht ein Tupel aus der Tabelle
 int tbl_remove_tupel(tbl_header* tbl_head, int* tupel_ptr);
 
 /*
+IMPLEMENTIERT. TODO: Überprüfen, ob komplett
 Gibt einen Zeiger auf den Anfang eines Tupels zurück.
 (Das Tupel, das den Wert value in dem Attribut hat)
 Nach *returnVal wird der Rückgabewert geschrieben, falls returnVal != 0 ist.
