@@ -9,5 +9,5 @@ clean:
 git-push:
 	git add Makefile; \
 	for i in $(DIRS); do make -C $$i git-push; done; \
-	git commit -m "automated update, $(shell date $(DATEFORMAT))"; \
+	git commit -m "automated update: $(shell date $(DATEFORMAT))"; \
 	git push
