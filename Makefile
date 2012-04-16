@@ -1,7 +1,6 @@
 # Makefile im Top-Level-Verzeichnis
 
 DIRS = database datastruct
-
 all:
 	for i in $(DIRS); do make -C $$i all; done
 clean:
@@ -9,5 +8,5 @@ clean:
 git-push:
 	git add Makefile; \
 	for i in $(DIRS); do make -C $$i git-push; done; \
-	git commit -m "automated update"; \
+	git commit -m "automated update, $(shell date)"; \
 	git push
