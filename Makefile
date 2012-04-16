@@ -1,6 +1,6 @@
 # Makefile im Top-Level-Verzeichnis
 
-DIRS = database datastruct
+DIRS = database datastruct net
 DATEFORMAT = -R
 all:
 	for i in $(DIRS); do make -C $$i all; done
