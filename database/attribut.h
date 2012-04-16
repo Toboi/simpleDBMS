@@ -21,7 +21,11 @@ TODO: Values
 #define ATTR_BYTE_UNIQUE 1
 */
 
-
+typedef struct{
+	int datatype; //Datentyp, wird später definiert per z.B. #define ATTRIBUT_STRING_INDEX oder _UNIQUE (impliziert INDEX)
+	int* index_struct; //Falls in datatype das index-bit gesetzt ist.
+	struct attribut *attribut_list_next; 
+} attribut;
 
 /*
 IMPLEMENTIERT für Integer
@@ -29,14 +33,14 @@ Gibt einen Zeiger auf ein Tupel (/Eine Liste von Tupeln bei nicht UNIQUE-Attribu
 key wird je nach Datentyp des Attributs als int, byte oder char* behandelt.
 In *returnVal wird, falls returnVal != 0, der Return-Wert geschrieben.
 */
-int* attr_get_tupel(struct attribut* attr, int key, int* returnVal);
+int* attr_get_tupel(attribut* attr, int key, int* returnVal);
 
 /*
 IMPLEMENTIERT für Integer
 Fügt ein Tupel in die Index-Struktur dieses Attributs ein, falls indiziert. value ist hier der Attribut-Wert des Tupels.
 Gibt einen Return-Wert gemäß datastruct.h zurück.
 */
-int attr_insert_tupel(struct attribut* attr, int* tupel, int value);
+int attr_insert_tupel(attribut* attr, int* tupel, int value);
 
 /*
 IMPLEMENTIERT für Integer
@@ -44,10 +48,4 @@ FEHLEND: int tree_int_remove(int key, int **rootNode);
 Löscht ein Tupel aus der Index-Struktur.
 Gibt einen Return-Wert gemäß datastruct.h zurück.
 */
-int attr_remove_tupel(struct attribut* attr, int value);
-
-struct attribut{
-	int datatype; //Datentyp, wird später definiert per z.B. #define ATTRIBUT_STRING_INDEX oder _UNIQUE (impliziert INDEX)
-	int* index_struct; //Falls in datatype das index-bit gesetzt ist.
-	struct attribut *attribut_list_next; 
-};
+int attr_remove_tupel(attribut* attr, int value);

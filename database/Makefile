@@ -15,4 +15,7 @@ clean:
 	rm db.o table.o attribut.o;
 clean_all:
 	rm *.o;
- 
+git-push:
+	git add Makefile; \
+	git add *.c; \
+	git add *.h

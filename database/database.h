@@ -14,7 +14,7 @@ Header für das ganze DIR
 #define DATABASE_SUCCESS 1
 #define ATTR_TUPEL_NOT_FOUND 1
 
-#include "db.h"
-#include "table.h"
 #include "attribut.h"
+#include "table.h"
+#include "db.h"
 #endif

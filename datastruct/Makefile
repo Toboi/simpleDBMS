@@ -10,4 +10,8 @@ tree.o: tree.c datastruct.h $(HEADERS)
 datastruct.o: stack.o list.o tree.o
 	ld -i -o datastruct.o stack.o list.o tree.o
 clean:
-	rm *.o
+	rm stack.o list.o tree.o	
+git-push:
+	git add Makefile; \
+	git add *.c; \
+	git add *.h
