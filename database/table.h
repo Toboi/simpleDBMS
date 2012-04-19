@@ -11,7 +11,7 @@ typedef struct{
 	int* attr_list_head; //Liste mit Zeigern auf jedes Attribut
 	int tupel_size; //Errechnet sich aus der Attribut-Liste
 	int* tupel_list_head; //Liste mit Zeigern auf jedes einzelne Tupel
-	int tupel_number; //Anzahl der Tupel
+	int tupel_number; //Anzahl der Tupel, TODO: Entscheiden ob nötig.
 } tbl_header;
 
 
@@ -59,6 +59,7 @@ int* tbl_get_tupel(tbl_header* tbl_head, char attr_name[ ], int value, int* retu
 /*--------------------------------------*/
 
 /*
+IMPLEMENTIERT
 Gibt den Speicher, den eine Tabelle mit Attributen, Tupeln und tbl_header belegt, frei.
 Rückgabewert ist in database.h definiert.
 */

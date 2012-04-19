@@ -1,6 +1,6 @@
 /*
 Header für attribut.c
-Hier werden Funktionen für den Umgang mit Attributen von Tabellen(->table.c) und deren Tupeln bereitgestellt, ebenso wie indizierung über Attributen.
+Hier werden Funktionen für den Umgang mit Attributen von Tabellen(->table.c) und deren Tupeln bereitgestellt, ebenso wie Indizierung über Attributen.
 */
 
 //Datentypen der Attribute
@@ -54,6 +54,7 @@ int attr_remove_tupel(attribut* attr, int value);
 
 
 /*
+IMPLEMENTIERT, TODO: Nur für Integer
 Gibt den Speicher, den ein Attribut mit Indexstruktur und attribut-header belegt, frei.
 Rückgabewert ist in database.h definiert.
 */

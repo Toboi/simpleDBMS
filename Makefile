@@ -1,6 +1,6 @@
 # Makefile im Top-Level-Verzeichnis
 
-DIRS = database datastruct net
+DIRS = database datastruct net test
 DATEFORMAT = +"%a, %d %b %Y %T"
 
 all:
@@ -15,3 +15,5 @@ git-push:
 	for i in $(DIRS); do make -C $$i git-push; done; \
 	git commit -m "automated update: $(shell date $(DATEFORMAT))"; \
 	git push
+git-pull:
+	git pull;

@@ -131,3 +131,13 @@ int list_int_size(int* head){
 	}
 	return count;
 }
+
+/*
+Führt eine Funktion für jedes Element der Liste aus.
+*/
+int list_int_void_each(int* head, void call(int)){
+	while(head != 0){
+		call(*head);
+		head = (int*)*(head+1);
+	}
+}

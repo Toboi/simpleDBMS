@@ -1,11 +1,11 @@
 HEADERS = datastruct.h stack.h list.h tree.h
 
 all: datastruct.o
-stack.o: stack.c datastruct.h $(HEADERS)
+stack.o: stack.c $(HEADERS)
 	cc -c stack.c
-list.o: list.c datastruct.h $(HEADERS)
+list.o: list.c $(HEADERS)
 	cc -c list.c
-tree.o: tree.c datastruct.h $(HEADERS)
+tree.o: tree.c $(HEADERS)
 	cc -c tree.c
 datastruct.o: stack.o list.o tree.o
 	ld -i -o datastruct.o stack.o list.o tree.o
