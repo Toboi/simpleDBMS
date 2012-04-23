@@ -64,3 +64,10 @@ Gibt den Speicher, den eine Tabelle mit Attributen, Tupeln und tbl_header belegt
 Rückgabewert ist in database.h definiert.
 */
 int free_tbl(tbl_header* tbl_head);
+
+
+/*
+Setzt den Namen einer Tabelle.
+((Überprüfung der Länge des Namens!!!))
+*/
+int tbl_rename_tbl(tbl_header* tbl_head, char* new_name);
