@@ -21,10 +21,13 @@ TODO: Values
 #define ATTR_BYTE_UNIQUE 1
 */
 
+#define ATTR_NAME_LENGTH 128
+
 typedef struct{
 	int datatype; //Datentyp, wird später definiert per z.B. #define ATTRIBUT_STRING_INDEX oder _UNIQUE (impliziert INDEX)
 	int* index_struct; //Falls in datatype das index-bit gesetzt ist.
 	struct attribut *attribut_list_next; 
+	char attr_name[ATTR_NAME_LENGTH];
 } attribut;
 
 /*

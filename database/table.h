@@ -28,9 +28,10 @@ Nach *returnVal wird der Rückgabewert geschrieben, falls returnVal != 0 ist.
 attribut* tbl_get_attr(tbl_header* table, char attr_name[ ], int* returnVal);
 
 /*
+IMPLEMENTIERT
 Gibt einen Zeiger auf den Attribut-Wert zum Attribut attr_name vom tupel zurück.
 */
-int* tbl_get_attrval_from_tupel(tbl_header table, int* tupel, char attr_name[ ]);
+int* tbl_get_tupel_val(tbl_header* tbl_head, int* tupel_ptr, char* attr_name);
 
   /*-----------------------------------*/
  /*-------  Tupel-Funktionen  --------*/

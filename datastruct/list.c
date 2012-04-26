@@ -24,6 +24,10 @@ int list_int_get(int index, int* head, int* returnVal){
 	return *ptr;
 }
 
+void list_int_next(int **head){
+	*head = (int*)*(*head+1);
+}
+
 /*
 Appends an element to the list and returns the return-code as specified in "datastructs.h"
 */
